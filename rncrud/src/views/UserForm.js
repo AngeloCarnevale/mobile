@@ -1,8 +1,10 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text } from "@rneui/base";
 
-export default props=> {
-    return(
-        <Text>User Form</Text>
+
+export default function UserForm (props) {
+
+    return (
+        <Text>UserForm</Text>
     )
 }
