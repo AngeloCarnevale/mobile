@@ -1,0 +1,11 @@
+# Navigation
+
+yarn add @react-navigation/native
+
+# Dependências para projeto expo
+
+npx expo install react-native-screens react-native-safe-area-context
+
+yarn add @react-navigation/stack
+
+yarn add react-native-gesture-handler
