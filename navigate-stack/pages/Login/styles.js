@@ -1,29 +1,35 @@
-import {StyleSheet} from 'react-native'
+import { styled } from "styled-components/native";
 
+export const LoginContainer = styled.View`
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+`
 
-const styles = StyleSheet.create(
-    {
-        container: {
-            backgroundColor: '#e0e0e0',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontFamily: "system-ui"
-        },
-        txt: {
-            fontSize: 30,
-            fontWeight: "bold",
-        },
-        form: {
-            gap: 20,
-            padding: 20,
-        },
-        input: {
-            backgroundColor: '#fff',
-            borderRadius: 5,
-        }
-        
+export const InputContainer = styled.View`
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 17em;
+    
+    input {
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 5px;
+        width: 100%;
     }
+    input::placeholder {
+        color: #c0c0c0;
+    }
+`
 
-)
-
-export default styles
+export const ButtonContainer = styled.View`
+    display: flex;
+    justify-content: center;
+`
