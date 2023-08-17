@@ -1,12 +1,13 @@
 import { View, Text } from "react-native";
+import React from "react";
 
 
-export default function Home ({route, navigation}) {
+export default function Home () {
 
     return(
         <View>
             <Text>Home</Text>
-            <Text>Bem vindo, {route.params.username}</Text>
+            <Text>Bem vindo</Text>
         </View>
     )
 }
