@@ -18,6 +18,7 @@ export default function SignUp({ navigation }) {
             const response = await createUserWithEmailAndPassword(auth, email, password)
             alert("Cadastro feito com sucesso")
             navigation.navigate("login")
+
         } catch (e) {
             alert("Erro ao efetuar cadastro", e)
         }

@@ -1,7 +1,7 @@
 import { Text, View, TextInput, TouchableOpacity } from "react-native"
 import { styles } from "./style"
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../contexts/auth";
 import { FIREBASE_AUTH } from '../../FireBaseConfig'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 
@@ -11,12 +11,14 @@ export default function Login({ navigation }) {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const auth = FIREBASE_AUTH;
+    // const {setUser} = useContext(AuthContext)
 
     const signIn = async () => {
         
         try {
             const response = await signInWithEmailAndPassword(auth, email, password)
             alert("Login feito com sucesso")
+            // setUser(email)
         } catch (e) {
             alert("Erro ao efetuar login", e)
         }
