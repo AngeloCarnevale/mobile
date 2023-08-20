@@ -1,4 +1,4 @@
-import Routes from "./Routes";
+import Routes from "./routes";
 import { NavigationContainer } from "@react-navigation/native";
 import { AuthProvider } from "./contexts/auth";
 

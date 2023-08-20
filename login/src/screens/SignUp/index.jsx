@@ -1,4 +1,4 @@
-import { View, TextInput, Text, TouchableOpacity } from "react-native";
+import { View, TextInput, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./style"
 import { createUserWithEmailAndPassword } from 'firebase/auth'
@@ -20,7 +20,7 @@ export default function SignUp({ navigation }) {
             navigation.navigate("login")
 
         } catch (e) {
-            alert("Erro ao efetuar cadastro", e)
+            alert("Erro ao efetuar cadastro")
         }
         finally {
             setLoading(false)
@@ -36,9 +36,10 @@ export default function SignUp({ navigation }) {
                     <TextInput style={styles.input} placeholder="Password" value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} />
                 </View>
                 <View style={styles.buttonContainer}>
+                {loading ? <ActivityIndicator size="large" color="#fcdd6c" /> : 
                     <TouchableOpacity onPress={signUp}>
                         <Text style={styles.textButton}>Sign Up</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity>}
                 </View>
             </View>
             <View style={styles.footerContainer}>

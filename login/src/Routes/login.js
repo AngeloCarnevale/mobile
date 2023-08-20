@@ -10,7 +10,16 @@ export function LoginLayout() {
     return (
         <LoginStack.Navigator initialRouteName="login">
             <LoginStack.Screen name="login" component={Login} options={{ headerShown: false }} />
-            <LoginStack.Screen name="signup" component={SignUp} options={{ headerShown: false }} />
+            <LoginStack.Screen name="signup" component={SignUp} 
+                options={
+                    { headerBackButtonMenuEnabled: true,
+                    title: "Create Account", 
+                    headerTitleAlign: "center", 
+                    headerStyle: {backgroundColor: "#fcdd6c"},
+                    headerTitleStyle: {fontSize: 15},
+                    headerBackTitleVisible: true,
+                    headerBackTitle:"Back"
+                    }} />
         </LoginStack.Navigator>
     )
 }

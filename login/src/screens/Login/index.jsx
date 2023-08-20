@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity } from "react-native"
+import { Text, View, TextInput, TouchableOpacity, ActivityIndicator } from "react-native"
 import { styles } from "./style"
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
@@ -9,11 +9,12 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 export default function Login({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false)
     const auth = FIREBASE_AUTH;
-    const {setUser} = useContext(AuthContext)
+    const { setUser } = useContext(AuthContext)
 
     const signIn = async () => {
-        
+        setLoading(true)
         try {
             const response = await signInWithEmailAndPassword(auth, email, password)
             alert("Login feito com sucesso")
@@ -21,8 +22,11 @@ export default function Login({ navigation }) {
         } catch (e) {
             alert("Erro ao efetuar login")
         }
+        finally {
+            setLoading(false)
+        }
     }
-    
+
     return (
         <View style={styles.container}>
             <View style={styles.loginContainer}>
@@ -32,15 +36,17 @@ export default function Login({ navigation }) {
                     <TextInput style={styles.input} placeholder="Password" value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} />
                 </View>
                 <View style={styles.buttonContainer}>
+                    {loading ? <ActivityIndicator size="large" color="#fcdd6c" /> : 
+
                     <TouchableOpacity onPress={signIn}>
                         <Text style={styles.textButton}>Sign in</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity>}
                 </View>
             </View>
             <View style={styles.footerContainer}>
                 <View style={styles.footer}>
                     <Text>Don't have an account?</Text>
-                    <TouchableOpacity onPress={()=> navigation.navigate("signup")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("signup")}>
                         <Text style={styles.signUp}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
