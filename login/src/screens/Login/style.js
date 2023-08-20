@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         backgroundColor: "#fffafa"
     },
     loginContainer: {
-        padding: 30,
+        padding: 40,
         alignItems: 'center',
         width: '100%',
     },

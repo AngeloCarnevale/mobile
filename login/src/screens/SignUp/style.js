@@ -7,10 +7,10 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "center",
         gap: 20,
-        backgroundColor: "#fffafa"
+        backgroundColor: "#fff"
     },
     loginContainer: {
-        padding: 30,
+        padding: 40,
         alignItems: 'center',
         width: '100%',
     },
