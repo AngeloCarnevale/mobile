@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { styles } from './styles'
 import { AuthContext } from "../../contexts/auth";
 import axios from "axios";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 
 export default function Home() {
@@ -37,17 +38,14 @@ export default function Home() {
     }
 
     return (
-
-
-        // <Text>Home</Text>
-        // <TouchableOpacity onPress={() => setUser(null)}>
-        //     <Text>Logout</Text>
-        // </TouchableOpacity>
         <>
             <View style={styles.menu}>
-                <Text>Home</Text>
+                <Text>Rick and Morty</Text>
                 <TouchableOpacity onPress={() => setUser(null)}>
-                    <Text>Logout</Text>
+                    <View>
+                        <Icon name="logout" size={20} color="black" />
+                    </View>
+
                 </TouchableOpacity>
             </View>
 

@@ -2,7 +2,7 @@ import { Text, View, TextInput, TouchableOpacity, ActivityIndicator } from "reac
 import { styles } from "./style"
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { FIREBASE_AUTH } from '../../FireBaseConfig'
+import { FIREBASE_AUTH } from '../../config/FireBaseConfig'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 
 
