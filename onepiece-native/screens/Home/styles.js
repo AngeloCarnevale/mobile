@@ -16,6 +16,14 @@ export const styles = StyleSheet.create({
     image: {
         width:150,
         height:150,
+    },
+    menu: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: 'red',
+        paddingHorizontal: 15,
+        paddingVertical: 10,
     }
     
 })
