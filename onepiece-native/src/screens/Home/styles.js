@@ -4,26 +4,57 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
-        backgroundColor: "#fffafa"
+        backgroundColor: "rgb(39, 43, 51)"
     },
 
     item: {
-        backgroundColor: 'gray',
-        margin: 10,
-        padding: 15,
+        backgroundColor: 'rgb(60, 62, 68)',
+        margin: 15,
+        display: 'flex',
+        flexDirection: 'row',
+        borderRadius: 15,
+    },
+    content: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        paddingLeft: 10
     },
     image: {
         width:150,
         height:150,
+        borderTopLeftRadius: 15,
+        borderBottomLeftRadius: 15,
     },
     menu: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: 'red',
         paddingHorizontal: 15,
-        paddingVertical: 10,
-    }
-    
+        paddingVertical: 30,
+    },
+    styleText: {
+        color: '#fff',
+    },
+    green: {
+        color: 'green',
+    },
+    red: {
+        color: 'red',
+    },
+    gray: {
+        color: 'gray'
+    },
+    text: {
+        color: '#fff',
+        fontSize: 13
+    },
+    title: {
+        color: '#fff',
+        fontSize: 15,
+        fontWeight: 'bold'
+    },
+    label: {
+        color: 'rgb(158, 158, 158)'
+    },
 })
