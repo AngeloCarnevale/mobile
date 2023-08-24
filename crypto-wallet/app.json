@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rncrud",
-    "slug": "rncrud",
+    "name": "react-navigation",
+    "slug": "react-navigation",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
