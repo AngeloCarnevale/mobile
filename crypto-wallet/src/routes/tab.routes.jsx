@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome5,MaterialCommunityIcons } from "@expo/vector-icons";
-import Feed from "../screens/Feed";
+import Home from "../screens/Home";
 import New from "../screens/New";
 import Quote from "../screens/Quote";
 
@@ -11,8 +11,8 @@ export default function TabRoutes() {
 
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }}>
-            <Tab.Screen name="Feed"
-                component={Feed}
+            <Tab.Screen name="home"
+                component={Home}
                 options={{
                     tabBarIcon: () => <FontAwesome5 size={25} color="gray" name="home" />,
                     tabBarLabel: 'Início'
