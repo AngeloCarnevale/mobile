@@ -1,11 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Feather } from "@expo/vector-icons";
-
-import TabRoutes from "./tab.routes";
 import Profile from "../screens/Profile";
 
-
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 export default function StackRoutes(){
 
@@ -14,6 +10,7 @@ export default function StackRoutes(){
             <Stack.Screen name="home" 
             component={Profile}
             />
+            <Stack.Screen />
         </Stack.Navigator>
     )
 }

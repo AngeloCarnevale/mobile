@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-navigation",
-    "slug": "react-navigation",
+    "name": "user-management",
+    "slug": "user-management",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
